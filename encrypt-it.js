@@ -1,12 +1,6 @@
 /*
  * Starter file 
  */
-console.log("Windows Loaded!");
-
-function handleClick() {
-console.log("Button Clicked!");
-}
-
 (function() {
   "use strict";
 
@@ -23,6 +17,12 @@ console.log("Button Clicked!");
   function init() {
     // Note: In this function, we usually want to set up our event handlers
     // for UI elements on the page.
+    let encryptButton = document.getElementById("encrypt-it");
+    encryptButton.addEventListener("click", handleClick);
+  }
+
+  function handleClick() {
+    console.log("Button Clicked!");
   }
 
   // Add any other functions in this area (you should not implement your
