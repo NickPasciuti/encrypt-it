@@ -2,6 +2,11 @@
  * Starter file 
  */
 console.log("Windows Loaded!");
+
+function handleClick() {
+console.log("Button Clicked!");
+}
+
 (function() {
   "use strict";
 
