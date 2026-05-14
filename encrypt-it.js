@@ -1,6 +1,7 @@
 /*
  * Starter file 
  */
+console.log("Windows Loaded!");
 (function() {
   "use strict";
 
