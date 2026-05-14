@@ -31,12 +31,12 @@ console.log("Window Loaded!");
     textToEncrypt = textToEncrypt.toLowerCase();
     let result = "";
     for (let i = 0; i < textToEncrypt.length; i++) {
-      if(textToEncrypt[i] < 'a' || text[i] > 'z') {
+      if(textToEncrypt[i] < 'a' || textToEncrypt[i] > 'z') {
         result += textToEncrypt[i];
       } else if (textToEncrypt[i] == 'z') {
         result += 'a';
         } else {
-          let letter = text.charCodeat(i);
+          let letter = textToEncrypt.charCodeAt(i);
           let resultLetter = String.fromCharCode(letter + 1);
           result += resultLetter;
       }
