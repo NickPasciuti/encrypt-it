@@ -19,12 +19,19 @@
     // for UI elements on the page.
     let encryptButton = document.getElementById("encrypt-it");
     encryptButton.addEventListener("click", handleClick);
+
+    let resetButton = document.getElementById("reset");
+    resetButton.addEventListener("click", handleReset);
   }
 
   function handleClick() {
     console.log("Button Clicked!");
   }
 
+  function handleReset() {
+    let textToClear = document.getElementById("input-text");
+    textToClear.value = "";
+  }
   // Add any other functions in this area (you should not implement your
   // entire program in the init function, for similar reasons that
   // you shouldn't write an entire Java program in the main method).
