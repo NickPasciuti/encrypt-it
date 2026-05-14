@@ -29,24 +29,27 @@ console.log("Window Loaded!");
     console.log("Button Clicked!");
     let textToEncrypt = document.getElementById("input-text").value;
     textToEncrypt = textToEncrypt.toLowerCase();
+
     let result = "";
     for (let i = 0; i < textToEncrypt.length; i++) {
-      if(textToEncrypt[i] < 'a' || textToEncrypt[i] > 'z') {
+      if (textToEncrypt[i] < "a" || textToEncrypt[i] > "z") {
         result += textToEncrypt[i];
-      } else if (textToEncrypt[i] == 'z') {
-        result += 'a';
-        } else {
-          let letter = textToEncrypt.charCodeAt(i);
-          let resultLetter = String.fromCharCode(letter + 1);
-          result += resultLetter;
+      } else if (textToEncrypt[i] === "z") {
+        result += "a";
+      } else {
+        let letter = textToEncrypt.charCodeAt(i);
+        let resultLetter = String.fromCharCode(letter + 1);
+        result += resultLetter;
       }
-      }
-      return result;
+    }
+
+    document.getElementById("result").textContent = result;
   }
 
   function handleReset() {
     let textToClear = document.getElementById("input-text");
     textToClear.value = "";
+    document.getElementById("result").textContent = "";
   }
   // Add any other functions in this area (you should not implement your
   // entire program in the init function, for similar reasons that
