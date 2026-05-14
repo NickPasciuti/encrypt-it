@@ -1,6 +1,7 @@
 /*
  * Starter file 
  */
+console.log("Window Loaded!");
 (function() {
   "use strict";
 
@@ -26,6 +27,21 @@
 
   function handleClick() {
     console.log("Button Clicked!");
+    let textToEncrypt = document.getElementById("input-text").value;
+    textToEncrypt = textToEncrypt.toLowerCase();
+    let result = "";
+    for (let i = 0; i < textToEncrypt.length; i++) {
+      if(textToEncrypt[i] < 'a' || text[i] > 'z') {
+        result += textToEncrypt[i];
+      } else if (textToEncrypt[i] == 'z') {
+        result += 'a';
+        } else {
+          let letter = text.charCodeat(i);
+          let resultLetter = String.fromCharCode(letter + 1);
+          result += resultLetter;
+      }
+      }
+      return result;
   }
 
   function handleReset() {
